@@ -32,14 +32,10 @@ cb.ID = "test"
 
   ```
  body, err := json.Marshal(cb)
-
   ```
 - Finally you can use your request body like:
 
   ```
-
-    
-    resp, err : = simpleHttpClient.DoRequest("POST", 'http://httpbin.org/post', headers, body, timeoutSeconds)
-
+  resp, err : = simpleHttpClient.DoRequest("POST", 'http://httpbin.org/post', headers, body, timeoutSeconds)
 
   ```
