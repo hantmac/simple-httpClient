@@ -15,36 +15,29 @@ type requestBody struct {
             name string
         }
 ```
-    - New a object of request body
-    ```
+ -  New a object of request body
 
-    cb := &requestBody{}
+```
+cb := &requestBody{}
+```
 
-    ```
+- Add paramters to body
 
-    - Add paramters to body
+- ```go
+  cb.ID = "test"
+  cb.name = "jack"
+  ```
 
-    ```
+  - marshal struct to []byte
 
-    cb.ID = "test"
-    cb.name = "jack"
+  ```
+  body, err := json.Marshal(cb)
+  ```
 
-    ```
+  - Finally you can use your request body like:
 
-    - marshal struct to []byte
-
-    ```
-
-    body, err := json.Marshal(cb)
-
-    ```
-
-    - Finally you can use your request body like:
-
-    ```
-
+    
     resp, err : = simpleHttpClient.DoRequest("POST", 'http://httpbin.org/post', headers, body, timeoutSeconds)
-
-    ```
+    
 
 
