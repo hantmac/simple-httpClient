@@ -1,3 +1,6 @@
+* usage:
+    go get github.com/hantmac/simple-httpClient
+
 **simpleHttpClient help you do http request easily**
 - You can use the lib flow the next example
 
