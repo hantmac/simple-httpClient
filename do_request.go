@@ -44,6 +44,7 @@ func DoRequest(reqType string, url string, headers map[string]string, data []byt
 	if err != nil {
 		fmt.Println(err)
 		log.WithError(err).Fatal("client.Do(req) failed")
+		return nil, nil, err
 	}
 
 	defer resp.Body.Close()
