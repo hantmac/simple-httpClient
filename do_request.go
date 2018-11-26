@@ -53,6 +53,7 @@ func DoRequest(reqType string, url string, headers map[string]string, data []byt
 	if statusCode >= 400 {
 		log.Info(resp)
 		log.WithError(err).Fatal("req failed, status code:" + string(statusCode))
+		return nil, nil, err
 	}
 	return body, header, nil
 
