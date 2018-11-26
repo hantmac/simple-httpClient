@@ -1,8 +1,8 @@
+**simpleHttpClient help you do http request easily**
 * usage:
 
     go get github.com/hantmac/simple-httpClient
 
-**simpleHttpClient help you do http request easily**
 - Use simpleHttpClient you have no need to concern about handling error response or check the status code.
 - You can use the lib flow the next example
 
